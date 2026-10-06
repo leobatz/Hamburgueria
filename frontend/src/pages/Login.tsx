@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useNavigate } from "react-router";
-import Input from "./Input"
+import Input from "../components/Input";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -11,8 +11,8 @@ function Login() {
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         console.log(email);
-        console.log(password)
-    }
+        console.log(password);
+    };
 
     return (
         <form onSubmit={handleSubmit} className="h-screen bg-[#161410] flex items-center justify-center">
@@ -28,7 +28,7 @@ function Login() {
                 </div>
             </div>
         </form>
-    )
-}
+    );
+};
 
-export default Login
+export default Login;

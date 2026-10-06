@@ -1,5 +1,5 @@
-import { useState } from "react"
-import Input from "./Input"
+import { useState } from "react";
+import Input from "../components/Input";
 import { useNavigate } from "react-router";
 
 function Register() {
@@ -7,7 +7,7 @@ function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [cep, setCep] = useState("")
+    const [cep, setCep] = useState("");
 
     const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ function Register() {
         console.log(password)
         console.log(confirmPassword);
         console.log(cep);
-    }
+    };
 
     return (
         <form onSubmit={handleSubmit} className="h-screen bg-[#161410] flex items-center justify-center">
@@ -37,7 +37,7 @@ function Register() {
                 </div>
             </div>
         </form>
-    )
-}
+    );
+};
 
-export default Register
+export default Register;

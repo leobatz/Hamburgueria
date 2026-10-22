@@ -4,6 +4,8 @@ import { prisma } from './src/db.js';
 
 const app = express();
 
+app.use(express.json()); //Mandando o express interpretar requisições que possuem JSON
+
 async function startServer() {
 
     connection();

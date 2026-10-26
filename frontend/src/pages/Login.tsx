@@ -8,10 +8,12 @@ function Login() {
 
     const navigate = useNavigate();
 
-    function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault();
         console.log(email);
         console.log(password);
+
+        const response = await fetch("http://localhost:3000/login")
     };
 
     return (
